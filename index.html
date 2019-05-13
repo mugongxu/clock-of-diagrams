@@ -24,41 +24,274 @@
             -moz-transform: translate(-50%, -50%);
             -ms-transform: translate(-50%, -50%);
             -o-transform: translate(-50%, -50%);
-            text-align: right;
         }
         .pos-ab > div {
             position: absolute;
-            right: 0;
-            top: 50%;
-            transform-origin: 0 0px;
-            -webkit-transform-origin: 0 0px;
+            top: 0;
+            left: 0;
+            width: 50px;
         }
-        .w-h-y {
-            width: 100px;
-            height: 100px;
+        /* 年 */
+        .w-h-y > div {
+            transform: translateX(-20px);
         }
+        /* 月 */
         .w-h-m {
-            width: 200px;
-            height: 200px;
+            margin-left: 60px;
+            transform-origin: -60px 0;
+            transform: rotate(30deg);
         }
+        .w-h-m > div {
+            transform-origin: -60px 0px;
+            -webkit-transform-origin: -60px 0px;
+            -ms-transform-origin: -60px 0px;
+            -o-transform-origin: -60px 0px;
+            -moz-transform-origin: -60px 0px;
+        }
+        .w-h-m > div:nth-child(1) {
+            transform: rotate(0deg);
+        }
+        .w-h-m > div:nth-child(2) {
+            transform: rotate(-30deg);
+        }
+        .w-h-m > div:nth-child(3) {
+            transform: rotate(-60deg);
+        }
+        .w-h-m > div:nth-child(4) {
+            transform: rotate(-90deg);
+        }
+        .w-h-m > div:nth-child(5) {
+            transform: rotate(-120deg);
+        }
+        .w-h-m > div:nth-child(6) {
+            transform: rotate(-150deg);
+        }
+        .w-h-m > div:nth-child(7) {
+            transform: rotate(-180deg);
+        }
+        .w-h-m > div:nth-child(8) {
+            transform: rotate(-210deg);
+        }
+        .w-h-m > div:nth-child(9) {
+            transform: rotate(-240deg);
+        }
+        .w-h-m > div:nth-child(10) {
+            transform: rotate(-270deg);
+        }
+        .w-h-m > div:nth-child(11) {
+            transform: rotate(-300deg);
+        }
+        .w-h-m > div:nth-child(12) {
+            transform: rotate(-330deg);
+        }
+        /* 日 */
         .w-h-d {
-            width: 300px;
-            height: 300px;
+            margin-left: 120px;
         }
+        .w-h-d > div {
+            transform-origin: -120px 0px;
+            -webkit-transform-origin: -120px 0px;
+            -ms-transform-origin: -120px 0px;
+            -o-transform-origin: -120px 0px;
+            -moz-transform-origin: -120px 0px;
+        }
+        .w-h-d > div:nth-child(1) {
+            transform: rotate(0deg);
+        }
+        .w-h-d > div:nth-child(2) {
+            transform: rotate(-11.61deg);
+        }
+        .w-h-d > div:nth-child(3) {
+            transform: rotate(-23.22deg);
+        }
+        .w-h-d > div:nth-child(4) {
+            transform: rotate(-34.83deg);
+        }
+        .w-h-d > div:nth-child(5) {
+            transform: rotate(-46.44deg);
+        }
+        .w-h-d > div:nth-child(6) {
+            transform: rotate(-58.05deg);
+        }
+        .w-h-d > div:nth-child(7) {
+            transform: rotate(-69.66deg);
+        }
+        .w-h-d > div:nth-child(8) {
+            transform: rotate(-81.27deg);
+        }
+        .w-h-d > div:nth-child(9) {
+            transform: rotate(-92.88deg);
+        }
+        .w-h-d > div:nth-child(10) {
+            transform: rotate(-104.49deg);
+        }
+        .w-h-d > div:nth-child(11) {
+            transform: rotate(-116.10deg);
+        }
+        .w-h-d > div:nth-child(12) {
+            transform: rotate(-127.71deg);
+        }
+        .w-h-d > div:nth-child(13) {
+            transform: rotate(-139.32deg);
+        }
+        .w-h-d > div:nth-child(14) {
+            transform: rotate(-150.93deg);
+        }
+        .w-h-d > div:nth-child(15) {
+            transform: rotate(-162.54deg);
+        }
+        .w-h-d > div:nth-child(16) {
+            transform: rotate(-174.15deg);
+        }
+        .w-h-d > div:nth-child(17) {
+            transform: rotate(-185.76deg);
+        }
+        .w-h-d > div:nth-child(18) {
+            transform: rotate(-197.37deg);
+        }
+        .w-h-d > div:nth-child(19) {
+            transform: rotate(-208.98deg);
+        }
+        .w-h-d > div:nth-child(20) {
+            transform: rotate(-220.59deg);
+        }
+        .w-h-d > div:nth-child(21) {
+            transform: rotate(-232.2deg);
+        }
+        .w-h-d > div:nth-child(22) {
+            transform: rotate(-243.81deg);
+        }
+        .w-h-d > div:nth-child(23) {
+            transform: rotate(-255.42deg);
+        }
+        .w-h-d > div:nth-child(24) {
+            transform: rotate(-267.03deg);
+        }
+        .w-h-d > div:nth-child(25) {
+            transform: rotate(-278.64deg);
+        }
+        .w-h-d > div:nth-child(26) {
+            transform: rotate(-290.25deg);
+        }
+        .w-h-d > div:nth-child(27) {
+            transform: rotate(-301.86deg);
+        }
+        .w-h-d > div:nth-child(28) {
+            transform: rotate(-313.47deg);
+        }
+        .w-h-d > div:nth-child(29) {
+            transform: rotate(-325.08deg);
+        }
+        .w-h-d > div:nth-child(30) {
+            transform: rotate(-336.69deg);
+        }
+        .w-h-d > div:nth-child(31) {
+            transform: rotate(-348.3deg);
+        }
+        /* 时 */
         .w-h-h {
-            width: 400px;
-            height: 400px;
+            margin-left: 180px;
         }
+        .w-h-h > div {
+            transform-origin: -180px 0px;
+            -webkit-transform-origin: -180px 0px;
+            -ms-transform-origin: -180px 0px;
+            -o-transform-origin: -180px 0px;
+            -moz-transform-origin: -180px 0px;
+        }
+        .w-h-h > div:nth-child(1) {
+            transform: rotate(0deg);
+        }
+        .w-h-h > div:nth-child(2) {
+            transform: rotate(-15deg);
+        }
+        .w-h-h > div:nth-child(3) {
+            transform: rotate(-30deg);
+        }
+        .w-h-h > div:nth-child(4) {
+            transform: rotate(-45deg);
+        }
+        .w-h-h > div:nth-child(5) {
+            transform: rotate(-60deg);
+        }
+        .w-h-h > div:nth-child(6) {
+            transform: rotate(-75deg);
+        }
+        .w-h-h > div:nth-child(7) {
+            transform: rotate(-90deg);
+        }
+        .w-h-h > div:nth-child(8) {
+            transform: rotate(-105deg);
+        }
+        .w-h-h > div:nth-child(9) {
+            transform: rotate(-120deg);
+        }
+        .w-h-h > div:nth-child(10) {
+            transform: rotate(-135deg);
+        }
+        .w-h-h > div:nth-child(11) {
+            transform: rotate(-150deg);
+        }
+        .w-h-h > div:nth-child(12) {
+            transform: rotate(-165deg);
+        }
+        .w-h-h > div:nth-child(13) {
+            transform: rotate(-180deg);
+        }
+        .w-h-h > div:nth-child(14) {
+            transform: rotate(-195deg);
+        }
+        .w-h-h > div:nth-child(15) {
+            transform: rotate(-210deg);
+        }
+        .w-h-h > div:nth-child(16) {
+            transform: rotate(-225deg);
+        }
+        .w-h-h > div:nth-child(17) {
+            transform: rotate(-240deg);
+        }
+        .w-h-h > div:nth-child(18) {
+            transform: rotate(-255deg);
+        }
+        .w-h-h > div:nth-child(19) {
+            transform: rotate(-270deg);
+        }
+        .w-h-h > div:nth-child(20) {
+            transform: rotate(-285deg);
+        }
+        .w-h-h > div:nth-child(21) {
+            transform: rotate(-300deg);
+        }
+        .w-h-h > div:nth-child(22) {
+            transform: rotate(-315deg);
+        }
+        .w-h-h > div:nth-child(23) {
+            transform: rotate(-330deg);
+        }
+        .w-h-h > div:nth-child(24) {
+            transform: rotate(-345deg);
+        }
+        /* 分 */
         .w-h-min {
-            width: 500px;
-            height: 500px;
+            margin-left: 240px;
         }
+        .w-h-min > div {
+            transform-origin: -240px 0px;
+            -webkit-transform-origin: -240px 0px;
+            -ms-transform-origin: -240px 0px;
+            -o-transform-origin: -240px 0px;
+            -moz-transform-origin: -240px 0px;
+        }
+        /* 秒 */
         .w-h-s {
-            width: 600px;
-            height: 600px;
+            margin-left: 300px;
         }
-        .c-m-2 {
-            transform: rotate(90deg);
+        .w-h-s > div {
+            transform-origin: -300px 0px;
+            -webkit-transform-origin: -300px 0px;
+            -ms-transform-origin: -300px 0px;
+            -o-transform-origin: -300px 0px;
+            -moz-transform-origin: -300px 0px;
         }
     </style>
 </head>
