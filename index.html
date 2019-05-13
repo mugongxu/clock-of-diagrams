@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图形时钟</title>
+    <style>
+        html, body {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            color:#ffffff;
+        }
+        .pos-ab {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            -webkit-transform: translate(-50%, -50%);
+            -moz-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            -o-transform: translate(-50%, -50%);
+            text-align: right;
+        }
+        .pos-ab > div {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform-origin: 0 0px;
+            -webkit-transform-origin: 0 0px;
+        }
+        .w-h-y {
+            width: 100px;
+            height: 100px;
+        }
+        .w-h-m {
+            width: 200px;
+            height: 200px;
+        }
+        .w-h-d {
+            width: 300px;
+            height: 300px;
+        }
+        .w-h-h {
+            width: 400px;
+            height: 400px;
+        }
+        .w-h-min {
+            width: 500px;
+            height: 500px;
+        }
+        .w-h-s {
+            width: 600px;
+            height: 600px;
+        }
+        .c-m-2 {
+            transform: rotate(90deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="c-y pos-ab w-h-y">
+        <div class="c-y-1">2019年</div>
+    </div>
+    <div class="c-m pos-ab w-h-m">
+        <div class="c-m-1">1月</div>
+        <div class="c-m-2">2月</div>
+        <div class="c-m-3">3月</div>
+        <div class="c-m-4">4月</div>
+        <div class="c-m-5">5月</div>
+        <div class="c-m-6">6月</div>
+        <div class="c-m-7">7月</div>
+        <div class="c-m-8">8月</div>
+        <div class="c-m-9">9月</div>
+        <div class="c-m-10">10月</div>
+        <div class="c-m-11">11月</div>
+        <div class="c-m-12">12月</div>
+    </div>
+    <div class="c-d pos-ab w-h-d">
+        <div class="c-d-1">1日</div>
+        <div class="c-d-2">2日</div>
+        <div class="c-d-3">3日</div>
+        <div class="c-d-4">4日</div>
+        <div class="c-d-5">5日</div>
+        <div class="c-d-6">6日</div>
+        <div class="c-d-7">7日</div>
+        <div class="c-d-8">8日</div>
+        <div class="c-d-9">9日</div>
+        <div class="c-d-10">10日</div>
+        <div class="c-d-11">11日</div>
+        <div class="c-d-12">12日</div>
+        <div class="c-d-13">13日</div>
+        <div class="c-d-14">14日</div>
+        <div class="c-d-15">15日</div>
+        <div class="c-d-16">16日</div>
+        <div class="c-d-17">17日</div>
+        <div class="c-d-18">18日</div>
+        <div class="c-d-19">19日</div>
+        <div class="c-d-20">20日</div>
+        <div class="c-d-21">21日</div>
+        <div class="c-d-22">22日</div>
+        <div class="c-d-23">23日</div>
+        <div class="c-d-24">24日</div>
+        <div class="c-d-25">25日</div>
+        <div class="c-d-26">26日</div>
+        <div class="c-d-27">27日</div>
+        <div class="c-d-28">28日</div>
+        <div class="c-d-29">29日</div>
+        <div class="c-d-30">30日</div>
+        <div class="c-d-31">31日</div>
+    </div>
+    <div class="c-h pos-ab w-h-h">
+        <div class="c-h-1">1时</div>
+        <div class="c-h-2">2时</div>
+        <div class="c-h-3">3时</div>
+        <div class="c-h-4">4时</div>
+        <div class="c-h-5">5时</div>
+        <div class="c-h-6">6时</div>
+        <div class="c-h-7">7时</div>
+        <div class="c-h-8">8时</div>
+        <div class="c-h-9">9时</div>
+        <div class="c-h-10">10时</div>
+        <div class="c-h-11">11时</div>
+        <div class="c-h-12">12时</div>
+        <div class="c-h-13">13时</div>
+        <div class="c-h-14">14时</div>
+        <div class="c-h-15">15时</div>
+        <div class="c-h-16">16时</div>
+        <div class="c-h-17">17时</div>
+        <div class="c-h-18">18时</div>
+        <div class="c-h-19">19时</div>
+        <div class="c-h-20">20时</div>
+        <div class="c-h-21">21时</div>
+        <div class="c-h-22">22时</div>
+        <div class="c-h-23">23时</div>
+        <div class="c-h-24">24时</div>
+    </div>
+    <div class="c-min pos-ab w-h-min">
+        <div class="c-min-1">1分</div>
+        <div class="c-min-2">2分</div>
+        <div class="c-min-3">3分</div>
+        <div class="c-min-4">4分</div>
+        <div class="c-min-5">5分</div>
+        <div class="c-min-6">6分</div>
+        <div class="c-min-7">7分</div>
+        <div class="c-min-8">8分</div>
+        <div class="c-min-9">9分</div>
+        <div class="c-min-10">10分</div>
+        <div class="c-min-11">11分</div>
+        <div class="c-min-12">12分</div>
+        <div class="c-min-13">13分</div>
+        <div class="c-min-14">14分</div>
+        <div class="c-min-15">15分</div>
+        <div class="c-min-16">16分</div>
+        <div class="c-min-17">17分</div>
+        <div class="c-min-18">18分</div>
+        <div class="c-min-19">19分</div>
+        <div class="c-min-20">20分</div>
+        <div class="c-min-21">21分</div>
+        <div class="c-min-22">22分</div>
+        <div class="c-min-23">23分</div>
+        <div class="c-min-24">24分</div>
+        <div class="c-min-25">25分</div>
+        <div class="c-min-26">26分</div>
+        <div class="c-min-27">27分</div>
+        <div class="c-min-28">28分</div>
+        <div class="c-min-29">29分</div>
+        <div class="c-min-30">30分</div>
+        <div class="c-min-31">31分</div>
+        <div class="c-min-32">32分</div>
+        <div class="c-min-33">33分</div>
+        <div class="c-min-34">34分</div>
+        <div class="c-min-35">35分</div>
+        <div class="c-min-36">36分</div>
+        <div class="c-min-37">37分</div>
+        <div class="c-min-38">38分</div>
+        <div class="c-min-39">39分</div>
+        <div class="c-min-40">40分</div>
+        <div class="c-min-41">41分</div>
+        <div class="c-min-42">42分</div>
+        <div class="c-min-43">43分</div>
+        <div class="c-min-44">44分</div>
+        <div class="c-min-45">45分</div>
+        <div class="c-min-46">46分</div>
+        <div class="c-min-47">47分</div>
+        <div class="c-min-48">48分</div>
+        <div class="c-min-49">49分</div>
+        <div class="c-min-50">50分</div>
+        <div class="c-min-51">51分</div>
+        <div class="c-min-52">52分</div>
+        <div class="c-min-53">53分</div>
+        <div class="c-min-54">54分</div>
+        <div class="c-min-55">55分</div>
+        <div class="c-min-56">56分</div>
+        <div class="c-min-57">57分</div>
+        <div class="c-min-58">58分</div>
+        <div class="c-min-59">59分</div>
+        <div class="c-min-60">60分</div>
+    </div>
+    <div class="c-s pos-ab w-h-s">
+        <div class="c-s-1">1秒</div>
+        <div class="c-s-2">2秒</div>
+        <div class="c-s-3">3秒</div>
+        <div class="c-s-4">4秒</div>
+        <div class="c-s-5">5秒</div>
+        <div class="c-s-6">6秒</div>
+        <div class="c-s-7">7秒</div>
+        <div class="c-s-8">8秒</div>
+        <div class="c-s-9">9秒</div>
+        <div class="c-s-10">10秒</div>
+        <div class="c-s-11">11秒</div>
+        <div class="c-s-12">12秒</div>
+        <div class="c-s-13">13秒</div>
+        <div class="c-s-14">14秒</div>
+        <div class="c-s-15">15秒</div>
+        <div class="c-s-16">16秒</div>
+        <div class="c-s-17">17秒</div>
+        <div class="c-s-18">18秒</div>
+        <div class="c-s-19">19秒</div>
+        <div class="c-s-20">20秒</div>
+        <div class="c-s-21">21秒</div>
+        <div class="c-s-22">22秒</div>
+        <div class="c-s-23">23秒</div>
+        <div class="c-s-24">24秒</div>
+        <div class="c-s-25">25秒</div>
+        <div class="c-s-26">26秒</div>
+        <div class="c-s-27">27秒</div>
+        <div class="c-s-28">28秒</div>
+        <div class="c-s-29">29秒</div>
+        <div class="c-s-30">30秒</div>
+        <div class="c-s-31">31秒</div>
+        <div class="c-s-32">32秒</div>
+        <div class="c-s-33">33秒</div>
+        <div class="c-s-34">34秒</div>
+        <div class="c-s-35">35秒</div>
+        <div class="c-s-36">36秒</div>
+        <div class="c-s-37">37秒</div>
+        <div class="c-s-38">38秒</div>
+        <div class="c-s-39">39秒</div>
+        <div class="c-s-40">40秒</div>
+        <div class="c-s-41">41秒</div>
+        <div class="c-s-42">42秒</div>
+        <div class="c-s-43">43秒</div>
+        <div class="c-s-44">44秒</div>
+        <div class="c-s-45">45秒</div>
+        <div class="c-s-46">46秒</div>
+        <div class="c-s-47">47秒</div>
+        <div class="c-s-48">48秒</div>
+        <div class="c-s-49">49秒</div>
+        <div class="c-s-50">50秒</div>
+        <div class="c-s-51">51秒</div>
+        <div class="c-s-52">52秒</div>
+        <div class="c-s-53">53秒</div>
+        <div class="c-s-54">54秒</div>
+        <div class="c-s-55">55秒</div>
+        <div class="c-s-56">56秒</div>
+        <div class="c-s-57">57秒</div>
+        <div class="c-s-58">58秒</div>
+        <div class="c-s-59">59秒</div>
+        <div class="c-s-60">60秒</div>
+    </div>
+</body>
+<script>
+    var numberMap = ['零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖', '拾'];
+</script>
+</html>
