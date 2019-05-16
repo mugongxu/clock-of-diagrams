@@ -1,0 +1,34 @@
+@mixin translatXY($x: 0, $y: 0) {
+    transform: translate($x, $y);
+    -webkit-transform: translate($x, $y);
+    -moz-transform: translate($x, $y);
+    -ms-transform: translate($x, $y);
+    -o-transform: translate($x, $y);
+}
+
+html, body {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+    color:#ffffff;
+    overflow: hidden;
+}
+.pos-ab {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    @include translatXY(-50%, -50%);
+    & > div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 55px;
+        animation-fill-mode: forwards;
+        -webkit-animation-fill-mode: forwards;
+        animation-timing-function: linear;
+        -webkit-animation-timing-function: linear;
+    }
+}
