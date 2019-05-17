@@ -5,5 +5,7 @@
 
 项目打包：npm run build
 
+[demo](https://github.com/mugongxu/clock-of-diagrams/blob/master/dist/index.html)
+
 效果图：
 ![image](https://github.com/mugongxu/clock-of-diagrams/blob/master/demo.gif)
