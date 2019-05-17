@@ -2,7 +2,7 @@
 import './css/index.scss';
 
 var numberMap = ['零', '壹', '贰', '叁', '肆', '伍', '陆', '柒', '捌', '玖', '拾'];
-var $ = function (id) {
+var $ = (id) => {
     return document.getElementById(id);
 }
 var $cy = $('c-y');
@@ -19,7 +19,7 @@ var hStatus = true;
 var minStatus = true;
 var sStatus = true;
 // 开始计时
-var changeClock = function () {
+var changeClock = () => {
     var date = new Date();
     var y = date.getFullYear();
     var m = date.getMonth() + 1;
@@ -38,7 +38,7 @@ var changeClock = function () {
     if (m == 1 && mStatus) {
         if (mStatus) {
             $cm.setAttribute('style', 'transform: rotate(360deg); transition: transform .5s ease-in;');
-            setTimeout(function () { $cm.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
+            setTimeout(() => { $cm.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
             mStatus = false;
         }
     } else {
@@ -48,7 +48,7 @@ var changeClock = function () {
     if (d == 1) {
         if (dStatus) {
             $cd.setAttribute('style', 'transform: rotate(360deg); transition: transform .5s ease-in;');
-            setTimeout(function () { $cd.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
+            setTimeout(() => { $cd.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
             dStatus = false;
         }
     } else {
@@ -58,7 +58,7 @@ var changeClock = function () {
     if (h == 0) {
         if (hStatus) {
             $ch.setAttribute('style', 'transform: rotate(360deg); transition: transform .5s ease-in;');
-            setTimeout(function () { $ch.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
+            setTimeout(() => { $ch.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
             hStatus = false;
         }
     } else {
@@ -68,7 +68,7 @@ var changeClock = function () {
     if (min == 0) {
         if (minStatus) {
             $cmin.setAttribute('style', 'transform: rotate(360deg); transition: transform .5s ease-in;');
-            setTimeout(function () { $cmin.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
+            setTimeout(() => { $cmin.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
             minStatus = false;
         }
     } else {
@@ -77,7 +77,7 @@ var changeClock = function () {
     }
     if (s == 0) {
         $cs.setAttribute('style', 'transform: rotate(360deg); transition: transform .5s ease-in;');
-        setTimeout(function () { $cs.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
+        setTimeout(() => { $cs.setAttribute('style', 'transform: rotate(0deg);'); }, 500);
         sStatus = false;
     } else {
         $cs.setAttribute('style', 'transform: rotate(' + sangle + 'deg); transition: transform .5s ease-in;');
@@ -85,12 +85,12 @@ var changeClock = function () {
     }
 }
 // 定时
-var infinite = function () {
+var infinite = () => {
     changeClock();
-    setInterval(function () {
+    setInterval(() => {
         changeClock();
     }, 1000);
 }
-setTimeout(function () {
+setTimeout(() => {
     infinite();
 }, 4000);

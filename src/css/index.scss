@@ -1,9 +1,16 @@
 @mixin translatXY($x: 0, $y: 0) {
     transform: translate($x, $y);
-    -webkit-transform: translate($x, $y);
-    -moz-transform: translate($x, $y);
-    -ms-transform: translate($x, $y);
-    -o-transform: translate($x, $y);
+}
+
+@mixin transform-origin($x: 0, $y: 0) {
+    margin-left: -$x;
+    transform-origin: $x $y;
+}
+
+@mixin origin-and-delay($x: 0, $d: 0, $l: 0) {
+    transform-origin: $x 0px;
+    animation-duration: $d;
+    animation-delay: $l;;
 }
 
 html, body {
@@ -30,5 +37,103 @@ html, body {
         -webkit-animation-fill-mode: forwards;
         animation-timing-function: linear;
         -webkit-animation-timing-function: linear;
+    }
+}
+
+/* 年 */
+.w-h-y > div {
+    @include translatXY(-20px);
+}
+
+/* 月 */
+.w-h-m {
+    @include transform-origin(-60px, 0);
+    & > div {
+        @include origin-and-delay(-60px, 2s, 0s);
+    }
+    @for $i from 1 through 12 {
+        & > div:nth-child(#{$i}) {
+            animation-name: c-m-#{$i};
+        }
+        @keyframes c-m-#{$i} {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-($i - 1) * 30deg);
+            }
+        }
+    }
+}
+
+/* 日 */
+.w-h-d {
+    @include transform-origin(-120px, 0);
+    & > div {
+        @include origin-and-delay(-120px, 2s, .5s);
+    }
+    @for $i from 1 through 31 {
+        & > div:nth-child(#{$i}) {
+            animation-name: c-d-#{$i};
+        }
+        @keyframes c-d-#{$i} {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-($i - 1) * 11.61deg);
+            }
+        }
+    }
+}
+
+
+/* 时 */
+.w-h-h {
+    @include transform-origin(-180px, 0);
+    & > div {
+        @include origin-and-delay(-180px, 2s, 1s);
+    }
+    @for $i from 1 through 24 {
+        & > div:nth-child(#{$i}) {
+            animation-name: c-h-#{$i - 1};
+        }
+        @keyframes c-h-#{$i - 1} {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-($i - 1) * 15deg);
+            }
+        }
+    }
+}
+
+/* 分秒 */
+.w-h-min, .w-h-s {
+    @include transform-origin(-240px, 0);
+    & > div {
+        @include origin-and-delay(-240px, 2s, 1.5s);
+    }
+}
+.w-h-s {
+    @include transform-origin(-300px, 0);
+    & > div {
+        @include origin-and-delay(-300px, 2s, 2s);
+    }
+}
+.w-h-min, .w-h-s {
+    @for $i from 1 through 60 {
+        & > div:nth-child(#{$i}) {
+            animation-name: c-ms-#{$i - 1};
+        }
+        @keyframes c-ms-#{$i - 1} {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(-($i - 1) * 6deg);
+            }
+        }
     }
 }
